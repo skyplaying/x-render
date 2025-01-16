@@ -7,6 +7,16 @@
 /yarn.lock
 /package-lock.json
 
+*/*/yarn-error.log
+
+.yarn
+.turbo/cookies
+.turbo/daemon
+.turbo
+
+# turbo
+*/*/.turbo
+
 
 # production
 /dist
@@ -19,9 +29,9 @@
 .vscode
 
 # umi
-.umi
-.umi-production
-.umi-test
+.dumi/tmp
+.dumi-production
+.dumi-test
 .env.local
 
 # lerna
@@ -48,3 +58,5 @@ node_modules
 old-doc
 test.json
 /docs/guide/.test
+
+/coverage

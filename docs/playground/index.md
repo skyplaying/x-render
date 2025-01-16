@@ -1,10 +1,8 @@
 ---
-order: 1
-nav:
-  order: 3
-  title: Playground
-sidemenu: false
-gapless: true
+order: 0
+mobile: false
+title: ''
+sidebar: false
 ---
 
-<code src='./index.jsx' />
+<code src='./index.tsx' inline={true}></code>

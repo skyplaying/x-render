@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
+    "target": "ES2015",
+    "module": "ES2015",
     "moduleResolution": "node",
     "importHelpers": true,
     "jsx": "react",
@@ -9,13 +9,15 @@
     "sourceMap": true,
     "baseUrl": "./",
     // "strict": true,
+    "declaration": true,
     "paths": {
       "@/*": ["src/*"],
       "@@/*": ["src/.umi/*"]
     },
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "resolveJsonModule": true
   },
   "exclude": [
     "node_modules",

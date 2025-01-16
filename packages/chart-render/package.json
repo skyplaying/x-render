@@ -1,45 +1,6 @@
 {
   "name": "chart-render",
-  "version": "0.1.9",
-  "scripts": {
-    "build": "father-build",
-    "prepare": "npm run build",
-    "postpublish": "git push --tags",
-    "beta": "npm publish --tag beta",
-    "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
-    "test": "umi-test",
-    "test:coverage": "umi-test --coverage"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:alibaba/form-render.git"
-  },
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
-  "typings": "dist/index.d.ts",
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
-  "lint-staged": {
-    "*.{js,jsx,less,md,json}": [
-      "prettier --write"
-    ],
-    "*.ts?(x)": [
-      "prettier --parser=typescript --write"
-    ]
-  },
-  "peerDependencies": {
-    "react": ">=16.8.0"
-  },
-  "dependencies": {
-    "@ant-design/charts": "1.1.1",
-    "ali-react-table": "^2.4.0",
-    "dvt-aggregation": "^0.2.8"
-  },
-  "devDependencies": {
-    "@types/react": "^17.0.3",
-    "@umijs/test": "^3.0.5"
-  },
+  "version": "1.0.0-alpha.3",
   "keywords": [
     "Chart",
     "ChartRender",
@@ -49,9 +10,50 @@
     "Json Schema",
     "Ant Design"
   ],
-  "homepage": "https://x-render.gitee.io/chart-render",
-  "license": "MIT",
+  "homepage": "https://xrender.fun/chart-render",
   "bugs": {
     "url": "https://github.com/alibaba/x-render/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:alibaba/x-render.git"
+  },
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "beta": "npm publish --tag beta",
+    "build": "father-build",
+    "prepare": "npm run build",
+    "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
+    "postpublish": "git push --tags",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage"
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "dependencies": {
+    "less": "^3.0.0",
+    "@ant-design/icons": "^4.2.2",
+    "@ant-design/plots": "^1.0.9",
+    "ahooks": "^3.4.1",
+    "classnames": "^2.3.1",
+    "formRenderV1": "npm:form-render@^1.4.13",
+    "zustand": "^4.0.0-rc.1"
+  },
+  "devDependencies": {},
+  "peerDependencies": {
+    "antd": "4.x",
+    "react": ">=16.8.0"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
   }
 }

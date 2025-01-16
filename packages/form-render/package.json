@@ -1,7 +1,20 @@
 {
   "name": "form-render",
-  "version": "v1.8.4-beta.6",
+  "version": "2.5.2",
   "description": "通过 JSON Schema 生成标准 Form，常用于自定义搭建配置界面生成",
+  "keywords": [
+    "Form",
+    "FormRender",
+    "Render",
+    "XRender",
+    "React",
+    "Json Schema",
+    "Ant Design"
+  ],
+  "homepage": "https://xrender.fun/form-render",
+  "bugs": {
+    "url": "https://github.com/alibaba/x-render/issues"
+  },
   "repository": {
     "type": "git",
     "url": "git@github.com:alibaba/form-render.git"
@@ -13,27 +26,25 @@
       "email": "tw93@qq.com"
     },
     {
-      "name": "mankaiviky",
-      "email": "mankaiviky@163.com"
-    },
-    {
-      "name": "FateRiddle",
-      "email": "fateriddle@gmail.com"
+      "name": "lhbxs",
+      "email": "596850703@qq.com"
     }
   ],
-  "scripts": {
-    "build": "father-build",
-    "prepare": "npm run build",
-    "postpublish": "git push --tags",
-    "beta": "npm publish --tag beta",
-    "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
-    "test": "umi-test",
-    "test:coverage": "umi-test --coverage"
-  },
   "main": "lib/index.js",
   "module": "es/index.js",
-  "gitHooks": {
-    "pre-commit": "lint-staged"
+  "files": [
+    "es",
+    "lib",
+    "package.json"
+  ],
+  "scripts": {
+    "beta": "npm publish --tag beta",
+    "build": "father-build",
+    "next": "npm publish --tag next",
+    "prepare": "npm run build",
+    "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
+    "postpublish": "git push --tags",
+    "test:ui": "vitest --ui"
   },
   "lint-staged": {
     "*.{js,jsx,less,md,json}": [
@@ -46,33 +57,26 @@
   "dependencies": {
     "@ant-design/icons": "^4.0.2",
     "async-validator": "^3.5.1",
+    "classnames": "^2.3.1",
     "color": "^3.1.2",
     "lodash-es": "^4.17.21",
-    "moment": "^2.24.0",
-    "nanoid": "^3.1.20",
+    "dayjs": "^1.11.7",
     "rc-color-picker": "^1.2.6",
-    "virtualizedtableforantd4": "^1.1.2"
-  },
-  "peerDependencies": {
-    "antd": "4.x",
-    "react": ">=16.8.0",
-    "react-dom": ">=16.8.0"
+    "virtualizedtableforantd4": "^1.1.2",
+    "zustand": "^4.1.5",
+    "ahooks": "^3.7.5"
   },
   "devDependencies": {
     "deep-equal": "^2.0.3",
     "rollup-plugin-copy": "^3.4.0"
   },
-  "keywords": [
-    "Form",
-    "FormRender",
-    "Render",
-    "XRender",
-    "React",
-    "Json Schema",
-    "Ant Design"
-  ],
-  "homepage": "https://x-render.gitee.io/form-render",
-  "bugs": {
-    "url": "https://github.com/alibaba/x-render/issues"
-  }
+  "peerDependencies": {
+    "antd": "4.x || 5.x",
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "sideEffect": false
 }
